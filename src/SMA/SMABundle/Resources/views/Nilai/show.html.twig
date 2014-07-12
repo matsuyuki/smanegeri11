@@ -1,0 +1,49 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Nilai Siswa</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th align="center">Nama</th>
+                <td align="center">{{ entity.nama }}</td>
+            </tr>
+            <tr>
+                <th align="center">NIS</th>
+                <td align="center">{{ entity.nis }}</td>
+            </tr>
+            <tr>
+                <th align="center">Mata Pelajara</th>
+                <td align="center">{{ entity.matapelajaran }}</td>
+            </tr>
+            <tr>
+                <th align="center">Tugas</th>
+                <td align="center">{{ entity.tugas }}</td>
+            </tr>
+            <tr>
+                <th align="center">UTS</th>
+                <td align="center">{{ entity.uts }}</td>
+            </tr>
+            <tr>
+                <th align="center">UAS</th>
+                <td align="center">{{ entity.uas }}</td>
+            </tr>            
+
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('nilai') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('nilai_edit', { 'id': entity.id}) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

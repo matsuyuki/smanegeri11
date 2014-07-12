@@ -1,0 +1,243 @@
+SMASMABundle_nilai2:
+        resource: "@SMASMABundle/Resources/config/routing/nilai2.yml"
+        prefix:   /admin/nilai2
+
+index_facebook:
+    pattern: /home/guest
+    defaults:  {_controller: SMASMABundle:Facebook:index }
+
+showmember:
+    pattern: /home/showmember
+    defaults: { _controller: SMASMABundle:Public:showmember }
+    
+memberedit:
+    pattern: /home/memberedit/{id}
+    defaults: { _controller: SMASMABundle:Public:memberedit }
+    
+welcome:
+    pattern: /
+    defaults: { _controller: SMASMABundle:Public:welcome }
+
+logout_fb:
+    pattern:  /fb/logout
+    defaults: { _controller: SMASMABundle:Public:welcome }
+    
+about2:
+    pattern: /fb/about
+    defaults: { _controller: SMASMABundle:Facebook:about2 }
+    
+profil2:
+    pattern: /fb/profil
+    defaults: { _controller: SMASMABundle:Facebook:profil2 }
+
+about:
+    pattern: /about 
+    defaults: { _controller: SMASMABundle:Public:about2 }
+
+profil:
+    pattern: /profil
+    defaults: { _controller: SMASMABundle:Public:profil2 }
+
+check_pegawai:
+    pattern: /home/pegawai
+    defaults: { _controller: SMASMABundle:Public:pegawai }
+
+check_kelas:
+    pattern: /home/kelas
+    defaults: { _controller: SMASMABundle:Public:kelas }
+    
+check_pegawai_satu:
+    pattern: /home/kelas/10-1
+    defaults: { _controller: SMASMABundle:Public:kelas1 }
+
+check_pegawai_satu1:
+    pattern: /home/kelas/10-2
+    defaults: { _controller: SMASMABundle:Public:kelas11 }
+    
+check_pegawai_dua1:
+    pattern: /home/kelas/2IPA1
+    defaults: { _controller: SMASMABundle:Public:kelas211 }
+check_pegawai_dua2:
+    pattern: /home/kelas/2IPA2
+    defaults: { _controller: SMASMABundle:Public:kelas212}
+check_pegawai_dua3:
+    pattern: /home/kelas/2IPS1
+    defaults: { _controller: SMASMABundle:Public:kelas221 }
+check_pegawai_dua4:
+    pattern: /home/kelas/2IPS2
+    defaults: { _controller: SMASMABundle:Public:kelas222}
+    
+check_pegawai_tiga1:
+    pattern: /home/kelas/3IPA1
+    defaults: { _controller: SMASMABundle:Public:kelas311 }
+check_pegawai_tiga2:
+    pattern: /home/kelas/3IPA2
+    defaults: { _controller: SMASMABundle:Public:kelas312}
+check_pegawai_tiga3:
+    pattern: /home/kelas/3IPS1
+    defaults: { _controller: SMASMABundle:Public:kelas321 }
+check_pegawai_tiga4:
+    pattern: /home/kelas/3IPS2
+    defaults: { _controller: SMASMABundle:Public:kelas322}
+
+check_kuis_kelas_satu:
+    pattern: /home/pegawai/wali kelas
+    defaults: { _controller: SMASMABundle:Public:pegawai1 }
+    
+check_kuis_kelas_dua:
+    pattern: /home/pegawai/guru
+    defaults: { _controller: SMASMABundle:Public:pegawai2 }
+    
+check_kuis_kelas_tiga:
+    pattern: /home/pegawai/pegawai
+    defaults: { _controller: SMASMABundle:Public:pegawai3 }   
+    
+showberita:
+    pattern:  /home/{id}/show
+    defaults: { _controller: SMASMABundle:Public:showberita }
+
+login_homepage:
+    pattern:  /login
+    defaults: { _controller: SMASMABundle:Public:login2 }
+
+logout:
+    pattern:  /home/logout
+    defaults: { _controller: SMASMABundle:Public:welcome }
+
+login_homepage1:
+    pattern:  /-/
+    defaults: { _controller: SMASMABundle:Public:login }
+SMASMABundle_homepage:
+    pattern:  /home
+    defaults: { _controller: SMASMABundle:Public:index }
+        
+SMASMABundle_about:
+    pattern:  /home/about
+    defaults: { _controller: SMASMABundle:Public:about }
+               
+SMASMABundle_profil:
+    pattern:  /home/profil
+    defaults: { _controller: SMASMABundle:Public:profil }
+
+SMASMABundle_pegawai:
+        resource: "@SMASMABundle/Resources/config/routing/pegawai.yml"
+        prefix:   /admin/pegawai
+
+SMASMABundle_siswa:
+        resource: "@SMASMABundle/Resources/config/routing/siswa.yml"
+        prefix:   /admin/siswa
+
+
+SMASMABundle_berita:
+        resource: "@SMASMABundle/Resources/config/routing/berita.yml"
+        prefix:   /admin/berita
+
+
+smasma_homepage:
+    pattern:  /admin/home
+    defaults: { _controller: SMASMABundle:Admin:index }
+smasma_admin_homepage:
+    pattern:  /admin
+    defaults: { _controller: SMASMABundle:Admin:admin }
+    
+smasma_logout:
+    pattern:  /logout
+    defaults: { _controller: SMASMABundle:Admin:logout }
+
+page_simpanmember:
+    pattern:  /admin/member/tambah_member
+    defaults: { _controller: SMASMABundle:Admin:simpanmember }
+member:
+    pattern:  /admin/member
+    defaults: { _controller: "SMASMABundle:Admin:mindex" }
+member_edit:
+    pattern:  /admin/member/edit/{id}
+    defaults: { _controller: "SMASMABundle:Admin:edit" }
+member_delete:
+    pattern:  /admin/member/{id}/delete
+    defaults: { _controller: "SMASMABundle:Admin:delete" }
+    requirements: { _method: post|delete }
+member_show:
+    pattern:  /admin/member/{id}/show
+    defaults: { _controller: "SMASMABundle:Admin:show" }
+member_new:
+    pattern:  /admin/member/new
+    defaults: { _controller: "SMASMABundle:Admin:new" }
+page_simpanabsensi:
+    pattern:  Admin/Absensi/tambah_absensi
+    defaults: { _controller: SMASMABundle:Absensi:simpanabsensi }
+absensi:
+    pattern: Admin/Absensi/
+    defaults: { _controller: "SMASMABundle:Absensi:index" }
+
+absensi_show:
+    pattern: Admin/Absensi/{id}/show
+    defaults: { _controller: "SMASMABundle:Absensi:show" }
+
+absensi_new:
+    pattern: Admin/Absensi/new
+    defaults: { _controller: "SMASMABundle:Absensi:new" }
+
+absensi_create:
+    pattern: Admin/Absensi/create
+    defaults: { _controller: "SMASMABundle:Absensi:create" }
+    requirements: { _method: post }
+
+absensi_edit:
+    pattern: Admin/Absensi/edit/{id}
+    defaults: { _controller: "SMASMABundle:Absensi:edit" }
+
+absensi_update:
+    pattern: Admin/Absensi/{id}/update
+    defaults: { _controller: "SMASMABundle:Absensi:update" }
+    requirements: { _method: post|put }
+
+absensi_delete:
+    pattern: Admin/Absensi/{id}/delete
+    defaults: { _controller: "SMASMABundle:Absensi:delete" }
+    
+nilai:
+    pattern: Admin/Nilai/
+    defaults: { _controller: "SMASMABundle:Nilai:index" }
+
+nilai_show:
+    pattern: Admin/Nilai/{id}/show
+    defaults: { _controller: "SMASMABundle:Nilai:show" }
+
+nilai_new:
+    pattern: Admin/Nilai/new
+    defaults: { _controller: "SMASMABundle:Nilai:new" }
+
+nilai_create:
+    pattern: Admin/Nilai/create
+    defaults: { _controller: "SMASMABundle:Nilai:create" }
+    requirements: { _method: post }
+
+nilai_edit:
+    pattern: Admin/Nilai/edit/{id}
+    defaults: { _controller: "SMASMABundle:Nilai:edit" }
+
+nilai_update:
+    pattern: Admin/Nilai/{id}/update
+    defaults: { _controller: "SMASMABundle:Nilai:update" }
+    requirements: { _method: post|put }
+
+nilai_delete:
+    pattern: Admin/Nilai/{id}/delete
+    defaults: { _controller: "SMASMABundle:Nilai:delete" }
+
+page_simpannilai:
+    pattern:  /admin/Nilai/tambah_nilai
+    defaults: { _controller: SMASMABundle:Nilai:simpannilai}
+check_absensi1:
+    pattern: /home/absensi/10-2
+    defaults: { _controller: SMASMABundle:Public:absensi }
+check_nilai:
+    pattern: /home/nilai/6110801
+    defaults: { _controller: SMASMABundle:Public:nilai }
+download:
+    pattern: /home/download
+    defaults: { _controller: SMASMABundle:Public:download }
+
+
+

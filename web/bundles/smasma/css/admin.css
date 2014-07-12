@@ -1,0 +1,116 @@
+body{
+    padding: 0;
+    margin: 0;
+    font: 12px/20px normal Helvetica, Arial, sans-serif;
+    color: #4F5155;
+    background-repeat: repeat-x;
+    background-color:gray;
+}
+
+
+a, a:link, a:visited, a:active{
+    text-decoration: none;
+    color: #4F5155;
+}
+
+
+.main{
+    width: 960px;
+    margin: auto;
+    display: table;
+    background-color: #FFF;
+    border:2px solid #fff;
+}
+
+.header{
+    width: 960px;
+    height: 150px;
+    display: table;
+    background-image: url('../images/header-admin.jpg');
+}
+
+.konten{
+    width: 950px;
+    height: 500px;
+    display:  table;
+    padding: 5px 5px 50px 5px;
+}
+
+.footer{
+    width: 960px;
+    height: 30px;
+    text-align: center;
+    font-size: 11px;
+    color:#fff;
+    padding: 15px 0px;
+    border-top:1px solid #ddd;
+    background-color: #91C4EF;
+}
+
+
+.menu-home{
+    width: 120px;
+    margin: 10px;
+    font-size: 12px;
+    padding: 5px;
+    display: table;
+    
+    float:left;
+}
+.menu-home:hover{
+    background-color: #f8f7f7;
+}
+.icon-menu{
+    float:left;
+    width: 30px;
+    margin-right: 5px;
+}
+.label-menu{
+   font-weight: bold;
+   padding-left: 20px;
+   padding-top: 10px;
+   vertical-align: auto;
+}
+
+.title-menu{
+    font-size: 14px; padding: 5px; color: #4297d7; font-weight: bold; margin-top: 15px;
+    border-bottom: 1px dotted #ddd;
+    background: -moz-linear-gradient(left, #ddd, #fff);
+}
+
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border:1px solid #ddd;
+}
+.table th{
+    background-color: #f8f7f7;
+}
+.table tr td{
+    border:1px solid #ddd;
+    padding: 5px;
+}
+
+.button{
+    background-color: #91C4EF;
+    color: #fff;
+    border:1px solid #fff;
+    border-radius:3px;
+    padding:3px 7px;
+    margin-top:5px;
+    cursor:pointer;
+}
+.button:hover{ background-color: #306DAC }
+
+.text-input{
+    padding:5px;
+}
+
+.judul-halaman{
+    font-size: 16px;
+    font-weight: bold;
+    color:#306DAC;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted #ddd;
+    margin:10px 0px;
+}

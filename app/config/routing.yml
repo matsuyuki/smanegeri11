@@ -1,0 +1,4 @@
+smasma:
+    resource: "@SMASMABundle/Resources/config/routing.yml"
+    prefix:   /
+

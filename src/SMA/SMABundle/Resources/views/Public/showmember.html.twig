@@ -1,0 +1,41 @@
+{% extends 'SMASMABundle:Public:template.html.twig' %}
+
+{% block body -%}
+     <h1>User</h1>
+
+    <table class="table table-responsive">
+        <tbody>
+            <tr>
+                <th align="center">Username</th>
+                <td align="center">{{ entity.username }}</td>
+            </tr>
+             <tr>
+                <th align="center">Password</th>
+                <td align="center">{{ entity.password }}</td>
+            </tr>
+            <tr>
+                <th align="center">Nama</th>
+                <td align="center">{{ entity.nama }}</td>
+            </tr>
+            <tr>
+                <th align="center">Status</th>
+                <td align="center">{{ entity.status }}</td>
+            </tr>
+            <tr>
+                <th align="center">Email</th>
+                <td align="center">{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th align="center">Alamat</th>
+                <td align="center">{{ entity.alamat }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+            <td>
+        <a href="{{ path('memberedit', { 'id': entity.id }) }}">
+        Edit</a></td>
+
+</ul>
+{% endblock %}
+{# empty Twig template #}

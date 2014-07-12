@@ -1,0 +1,52 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Data Pegawai</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th align="center">Nip</th>
+                <th align="center">Nama</th>
+                <th align="center">Jabatan</th>
+                <th align="center">Bidang</th>
+                <th align="center">Telp</th>
+                <th align="center">Email</th>
+                <th align="center">Alamat</th>
+                <th align="center">Tgllahir</th>
+                <th align="center">Agama</th>
+                <th align="center">Jk</th>
+           
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td align="center"><a href="{{ path('pegawai_show', { 'id': entity.id }) }}">{{ entity.nis }}</a></td>
+                <td align="center">{{ entity.nama }}</td>
+                <td align="center">{{ entity.jabatan }}</td>
+                <td align="center">{{ entity.bidang }}</td>
+                <td align="center">{{ entity.telp }}</td>
+                <td align="center">{{ entity.email }}</td>
+                <td align="center">{{ entity.alamat }}</td>
+                <td align="center">{% if entity.tglLahir %}{{ entity.tglLahir|date('Y-m-d') }}{% endif %}</td>
+                <td align="center">{{ entity.agama }}</td>
+                <td align="center">{{ entity.jk }}</td>
+       
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('pegawai_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('pegawai_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<a href="{{ path('pegawai_new') }}"><button class="button">Tambah Data</button></a>
+    {% endblock %}

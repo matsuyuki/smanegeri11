@@ -1,0 +1,7 @@
+parameters:
+#    smasma.example.class: SMA\SMABundle\Example
+
+services:
+#    smasma.example:
+#        class: %smasma.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

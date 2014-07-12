@@ -1,0 +1,45 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Absensi Siswa</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th align="center">Nama</th>
+                <td align="center">{{ entity.nama }}</td>
+            </tr>
+            <tr>
+                <th align="center">Kelas</th>
+                <td align="center">{{ entity.kelas }}</td>
+            </tr>
+            <tr>
+                <th align="center">Sub Kelas</th>
+                <td align="center">{{ entity.subKelas }}</td>
+            </tr>
+            <tr>
+                <th align="center">Tanggal</th>
+                <td align="center">{{ entity.tanggal|date('Y-m-d') }}</td>
+            </tr>
+            <tr>
+                <th align="center">Kehadiran</th>
+                <td align="center">{{ entity.absen }}</td>
+            </tr>            
+
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('absensi') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('absensi_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

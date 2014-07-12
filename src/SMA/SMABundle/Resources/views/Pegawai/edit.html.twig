@@ -1,0 +1,69 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h2>Ubah Data Pegawai</h2>
+    <form class="well" id="form" method="POST" action="#">
+        <table cellspacing=10>
+            <tr>
+                <td>NIS</td>
+                <td><input type="text" name="nis" value="{{pegawai.nis}}"></td>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama" value="{{pegawai.nama}}"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" value="{{pegawai.email}}"></td>
+            </tr>
+            <tr>
+                <td>alamat</td>
+                <td><input type="text" name="alamat" value="{{pegawai.alamat}}"></td>
+            </tr>
+            <tr><td valign=top>Jabatan</td>
+                <td>
+                    <select name="jabatan" class="text-input">
+                        <option value="{{pegawai.jabatan}}">{{pegawai.jabatan}} </option>
+                        <option value="Wali Kelas">Wali Kelas</option>
+                        <option value="Guru">Guru</option>
+                        <option value="Honorer">Guru Honorer</option>
+                    </select>
+
+                </td></tr>
+            <tr>
+                <td>Bidang</td>
+                <td><input type="text" name="bidang" value="{{pegawai.bidang}}"></td>
+            </tr>
+            <tr>
+                <td>Telp</td>
+                <td><input type="text" name="telp" value="{{pegawai.telp}}"></td>
+            </tr>
+            <tr>
+
+            <tr>
+                <td>alamat</td>
+                <td><input type="text" name="alamat" value="{{pegawai.alamat}}"></td>
+            </tr><tr><td valign=top>Agama</td>
+                <td>
+                    <select name="agama" class="text-input">
+                        <option value="{{pegawai.agama}}">{{pegawai.agama}}</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen Protestan">Kristen Protestan</option>
+                        <option value="Kristen Katolik">Kristen Katolik</option>
+                        <option value="Budha">Budha</option>
+                        <option value="Hindu">Hindu</option>
+                    </select>
+                </td></tr>
+            <tr><td valign=top>Jenis Kelamin</td>
+                <td>
+                    <select name="jk" class="text-input">
+                        <option value="{{pegawai.jk}}">{{pegawai.jk}}</option>
+                        <option value="Pria">Pria</option>
+                        <option value="Perempuan">Perempuan</option>
+
+                    </select>
+                </td></tr>
+            <tr><td>&nbsp;</td><td><input type="submit" name="submit" value="Simpan" class="button"></td></tr>
+        </table>
+    </form>
+{% endblock %}

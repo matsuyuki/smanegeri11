@@ -1,0 +1,33 @@
+page_simpansiswa:
+    pattern:  /tambah_siswa
+    defaults: { _controller: SMASMABundle:Siswa:simpansiswa }
+siswa:
+    pattern:  /
+    defaults: { _controller: "SMASMABundle:Siswa:index" }
+
+siswa_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SMASMABundle:Siswa:show" }
+
+siswa_new:
+    pattern:  /new
+    defaults: { _controller: "SMASMABundle:Siswa:new" }
+
+siswa_create:
+    pattern:  /create
+    defaults: { _controller: "SMASMABundle:Siswa:create" }
+    requirements: { _method: post }
+
+siswa_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SMASMABundle:Siswa:edit" }
+
+siswa_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SMASMABundle:Siswa:update" }
+    requirements: { _method: post|put }
+
+siswa_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SMASMABundle:Siswa:delete" }
+    requirements: { _method: post|delete }

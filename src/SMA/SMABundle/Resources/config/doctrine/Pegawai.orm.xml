@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="SMA\SMABundle\Entity\Pegawai" table="pegawai">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="nis" type="string" column="nis" length="200" nullable="false"/>
+    <field name="nama" type="string" column="nama" length="200" nullable="false"/>
+    <field name="jabatan" type="string" column="jabatan" length="20" nullable="false"/>
+    <field name="telp" type="integer" column="telp" nullable="false"/>
+    <field name="email" type="string" column="email" length="400" nullable="false"/>
+    <field name="alamat" type="string" column="alamat" length="400" nullable="false"/>
+    <field name="tglLahir" type="date" column="tgl_lahir" nullable="false"/>
+    <field name="agama" type="string" column="agama" length="200" nullable="false"/>
+    <field name="jk" type="string" column="jk" length="200" nullable="false"/>
+  </entity>
+</doctrine-mapping>

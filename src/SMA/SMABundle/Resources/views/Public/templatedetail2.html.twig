@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+        <title>{% block title %}SMA NEGERI 11 Medan{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/smasma/css/public.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/smasma/css/menu.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/smasma/css/calender.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+    </head>
+    <body>
+
+        <div class="main">
+            <div class="header">
+                <img src="{{asset('image/header3.jpg')}}" class="img-responsive img-thumbnail" alt="Responsive image">
+            </div>
+            <div class="menu">
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href="{{ path('welcome') }}">Home</a></li>
+                        <li class='has-sub '><a href="{{ path('profil') }}">Profil</a></li>
+                        <li><a href="{{ path('about') }}">About Us</a></li>
+                        <li><a href="{{ path('login_homepage') }}">Login</a></li>
+                    </ul>
+                </div>  
+
+
+                <div class="konten">
+
+                    <div class="kiri-detail">{% block body %}{% endblock %}</div>
+
+
+                    <div class="kanan">
+                        <div style="font-size:14px; font-weight: bold">=============================</div>
+                       
+                        <h2>Kata Pengantar</h2>
+                        <p align="justify"> 
+                            <img src="{{ asset('image/kepsek.png') }}" width="150" style="float:left">
+                            Puji syukur kami panjatkan ke hadirat Tuhan yang atas berkat rahmat 
+                            dan hidayah-Nya kami bisa meluncurkan situs web..
+                        </p>
+                        <div style="font-size:14px; font-weight: bold">=============================</div>
+                        <table id="wp-calendar">
+                            <caption>June 2014</caption>
+
+                            <thead>
+                                <tr>
+                                    <th scope="col" title="Monday">M</th>
+                                    <th scope="col" title="Tuesday">T</th>
+                                    <th scope="col" title="Wednesday">W</th>
+                                    <th scope="col" title="Thursday">T</th>
+                                    <th scope="col" title="Friday">F</th>
+                                    <th scope="col" title="Saturday">S</th>
+                                    <th scope="col" title="Sunday">S</th>
+                                </tr>
+                            </thead>
+
+                            <tr>
+                                <td colspan="3">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+                            </tr>
+
+                            <tr>
+
+                                <td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
+                            </tr>
+
+                            <tr>
+                                <td>19</td><td>20</td><td>21</td><td>22</td><td id="today">23</td><td>24</td><td>25</td>
+                            </tr>
+
+                            <tr>
+                                <td><a href="#" title="">26</a></td><td>27</td><td>28</td><td>29</td><td>30</td><td colspan="2">&nbsp;</td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+
+                </div><div class="footer">SMA Negeri 11 Medan </div>
+            </div>
+        </div>  
+
+    </body>
+</html>

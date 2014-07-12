@@ -1,0 +1,40 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+
+
+{% block body %}
+    <H4> ADMIN PANEL</H4>
+
+
+    <div class="menu-home">
+        <div class="label-menu">        
+            <a href="{{ path('berita_new') }}"><button class="button">Tambah Berita</button></a>
+            
+        </div>
+    </div>
+
+
+  <div class="menu-home">
+        <div class="label-menu">        
+            <a href="{{ path('pegawai_new') }}"><button class="button">Tambah Data Pegawai</button></a>
+            
+        </div>
+    </div>
+
+   <div class="menu-home">
+        <div class="label-menu">        
+            <a href="{{ path('siswa_new') }}"><button class="button">Tambah Data Siswa</button></a>
+            
+        </div>
+    </div>
+
+   <div class="menu-home">
+        <div class="label-menu">        
+            <a href="{{ path('member_new') }}"><button class="button">Tambah Data User</button></a>
+            
+        </div>
+    </div>
+
+
+
+{% endblock %} 

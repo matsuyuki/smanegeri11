@@ -1,0 +1,38 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Berita</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th align="center">Judul</th>
+                <th align="center">Tanggal</th>
+
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entity in entities%}
+                <tr>
+                    <td align="center"><a href="{{ path('berita_show', { 'id': entity.id }) }}">{{ entity.judul }}</a></td>
+                    <td align="center">{% if entity.tanggal %}{{ entity.tanggal|date('Y-m-d') }}{% endif %}</td>
+
+                    <td align="center">
+                        <ul>
+                            <li>
+                                <a href="{{ path('berita_show', { 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a type href="{{ path('berita_edit', { 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+        <a href="{{ path('berita_new') }}"><button class="button">Tambah Data</button></a>
+      
+
+            {% endblock %}

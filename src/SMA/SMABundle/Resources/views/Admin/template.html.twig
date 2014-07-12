@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+        <title>{% block title %}Halaman Admin{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/smasma/css/admin.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/smasma/css/menu.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+
+        <script src="{{ asset('bundles/smasma/js/jquery-1.9.1.js') }}"></script>
+
+    </head>
+    <body>
+        <div class="main">
+                                  <div class="header">
+                <img src="{{asset('image/header3.jpg')}}" class="img-responsive img-thumbnail" alt="Responsive image">
+            </div>
+
+            <div class="menu">
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href="{{ path('smasma_homepage') }}">Home</a></li>
+                        <li><a href="{{path('pegawai')}}">Data Pegawai</a></li>
+                        <li><a href="{{path('siswa')}}">Data Siswa</a></li> 
+                        <li><a href="{{path('member')}}">Data User</a></li> 
+                        <li><a href="{{path('berita')}}">Berita</a></li> 
+                        <li><a href="{{path('absensi')}}">Absensi</a></li> 
+                        <li><a href="{{path('nilai')}}">Nilai</a></li> 
+                    </ul>
+                </div>    
+                <div style="float:right; margin-top:4px; margin-right: 10px;">
+                    <a href="{{ path('smasma_logout') }}">Logout</a>
+                </div>
+            </div>
+            <div class="konten">
+            {% block body %}{% endblock %}
+
+        </div>
+        <div class="footer">SMA NEGERI 11 MEDAN</div>
+    </div>
+
+
+
+
+
+</body>
+</html>

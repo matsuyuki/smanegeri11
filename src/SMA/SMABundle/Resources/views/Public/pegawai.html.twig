@@ -1,0 +1,12 @@
+{% extends 'SMASMABundle:Public:templatedetail.html.twig' %}
+
+{% block body %}
+ 
+    <dl class="dl-horizontal">
+        <dt>Daftar Pegawai</dt> 
+        <dd><a href="{{ path('check_kuis_kelas_satu') }}">Wali Kelas</a> </dd>
+        <dd><a href="{{ path('check_kuis_kelas_dua') }}">Guru</a> </dd>
+        <dd><a href="{{ path('check_kuis_kelas_tiga') }}">Pegawai</a> </dd>
+    </dl>
+
+{% endblock %} {# empty Twig template #}

@@ -1,0 +1,23 @@
+{% extends 'SMASMABundle:Public:template.html.twig' %}
+
+{%block body%}
+    <legend><center>Daftar Absensi Siswa Kelas 10-2</center></legend>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Tanggal</th>
+                <th>Nama</th>
+                <th>Kehadiran</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {%for view in entity1 %}
+                <tr><td align="center">{{ view.tanggal|date('Y-m-d') }}</td>
+                    <td>{{view.nama}}</td>
+                    <td>{{view.absen}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock%}

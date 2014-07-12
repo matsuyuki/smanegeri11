@@ -1,0 +1,36 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Berita</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th align="center">Judul</th>
+                <td align="center" size="100">{{ entity.judul }}</td>
+            </tr>
+            <tr>
+                <th align="center">Isi</th>
+                <td>{{ entity.isi|raw }}</td>
+            </tr>
+            <tr>
+                <th align="center">Tanggal</th>
+                <td align="center">{{ entity.tanggal|date('Y-m-d') }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('berita') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('berita_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

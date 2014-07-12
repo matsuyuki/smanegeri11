@@ -1,0 +1,141 @@
+body{
+    padding: 0;
+    margin: 0;
+    font: 12px/20px normal Helvetica, Arial, sans-serif;
+    color: #4F5155;
+    background-image: url('../images/bg.jpg');
+    background-repeat: repeat-x;
+    background-color:#f7f6f6;
+}
+
+
+a, a:link, a:visited, a:active{
+    text-decoration: none;
+    color: #4F5155;
+}
+
+
+.main{
+    width: 960px;
+    margin: auto;
+    display: table;
+    background-color: #FFF;
+    border:2px solid #fff;
+}
+
+.header{
+    width: 960px;
+    height: 227px;
+    display: table;
+    background-image: url('../images/header.jpg');
+}
+
+.konten{
+    width: 960px;
+    height: 500px;
+    display:  table;
+    padding-bottom: 50px;
+}
+
+.kiri{
+    width: 220px;
+    float: left;
+    padding: 5px;
+    display: table;
+}
+
+.kiri-detail{
+    width: 720px;
+    float: left;
+    padding: 5px;
+    display: table;
+}
+
+.isi{
+    width: 478px;
+    float: left;
+    padding: 5px;
+    display: table;
+}
+.kanan{
+    width: 220px;
+    padding: 5px;
+    float: left;
+    display: table;
+}
+
+
+.footer{
+    width: 960px;
+    height: 30px;
+    text-align: center;
+    font-size: 11px;
+    color:#fff;
+    padding: 15px 0px;
+    border-top:1px solid #ddd;
+    background-color: #91C4EF;
+}
+
+
+/*
+    untuk format tampilan halaman login
+*/
+#table-login{
+    font-size: 14px;
+}
+.input-login{
+    width: 200px;
+    padding:5px 5px;
+    border-radius: 3px;
+    border:1px solid #ddd;
+}
+.button{
+    padding: 3px 10px;
+}
+
+/*
+    untuk format halaman pegawai
+*/
+.pegawai{
+    width: 700px;
+    display: table;
+    padding: 10px;
+}
+.pegawai-foto{
+    width: 110px;
+    display: inline;
+    
+}
+.pegawai-foto img{
+    width: 110px;
+    margin-bottom: 30px;
+}
+
+
+/*
+    untuk format posisi pencarian yang ada di menu atas
+*/
+
+#pencarian{
+    float:right;
+    margin-top: 4px;
+}
+.input-cari{
+    width: 165px;
+}
+.button-cari{
+    padding: 0px 8px;
+}
+
+
+/*
+ *  untuk format tampilan daftar berita pada halaman home
+ */
+.berita{
+    margin-top: 10px;
+}
+.title-news{
+    font-size: 14px;
+    font-weight: bold;
+    color:#AA3333;
+}

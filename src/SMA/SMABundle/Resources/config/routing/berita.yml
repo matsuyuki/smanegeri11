@@ -1,0 +1,33 @@
+page_simpanberita:
+    pattern:  /tambah_berita
+    defaults: { _controller: SMASMABundle:Berita:simpanberita }
+berita:
+    pattern:  /
+    defaults: { _controller: "SMASMABundle:Berita:index" }
+
+berita_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SMASMABundle:Berita:show" }
+
+berita_new:
+    pattern:  /new
+    defaults: { _controller: "SMASMABundle:Berita:new" }
+
+berita_create:
+    pattern:  /create
+    defaults: { _controller: "SMASMABundle:Berita:create" }
+    requirements: { _method: post }
+
+berita_edit:
+    pattern:  /edit/{id}
+    defaults: { _controller: "SMASMABundle:Berita:edit" }
+
+berita_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SMASMABundle:Berita:update" }
+    requirements: { _method: post|put }
+
+berita_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SMASMABundle:Berita:delete" }
+    requirements: { _method: post|delete }

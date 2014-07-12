@@ -1,0 +1,43 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{%block body%}
+  <h2>Ubah Data Member</h2>
+    <form class="well" id="form" method="POST" action="#">
+        <table cellspacing=10>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="nis" value="{{member.username}}" disabled></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="nis" value="{{member.password}}"></td>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama" value="{{member.nama}}"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" name="email" value="{{member.email}}"></td>
+            </tr>
+            <tr>
+                <td>alamat</td>
+                <td><input type="text" name="alamat" value="{{member.alamat}}"></td>
+            </tr>
+            <tr><td valign=top>Status</td>
+                <td>
+                    <select name="jabatan" class="text-input" disabled>
+                        <option value="{{member.status}}">{{member.status}} </option>
+                        <option value="Siswa">Siswa</option>
+                        <option value="Guru">Guru</option>
+                    </select>
+
+                </td></tr>
+            <tr>
+                <td>alamat</td>
+                <td><input type="text" name="alamat" value="{{member.alamat}}"></td>
+           
+            <tr><td>&nbsp;</td><td><input type="submit" name="submit" value="Simpan" class="button"></td></tr>
+        </table>
+    </form>
+{%endblock%}

@@ -1,0 +1,44 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h2>Ubah Data Siswa</h2>
+    <form class="well" id="form" method="POST" action="#">
+        <table cellspacing=10>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama" value="{{absensi.nama}}"></td>
+            </tr>
+            <tr><td valign=top>kelas</td>
+                <td>
+                    <select name="kelas" class="text-input">
+                        <option value="{{absensi.kelas}}">{{absensi.kelas}}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>     
+                </td></tr>
+            <tr><td valign=top>sub kelas</td>
+                <td>
+                    <select name="subkelas" class="text-input">
+                        <option value="{{absensi.subkelas}}">{{absensi.subkelas}}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>     
+                </td></tr>
+           
+            <tr><td valign=top>Kehadiran</td>
+                <td>
+                    <select name="absen" class="text-input">
+                        <option value="{{absensi.absen}}">{{absensi.absen}}</option>
+                        <option value="Hadir">hadir</option>
+                        <option value="Absen">absen</option>
+                        <option value="Sakit">sakit</option>
+                        <option value="Izin">izin</option>
+                    </select>     
+                </td></tr>            
+            
+            <tr><td>&nbsp;</td><td><input type="submit" name="submit" value="Simpan" class="button"></td></tr>
+        </table>
+    </form>
+{% endblock %}

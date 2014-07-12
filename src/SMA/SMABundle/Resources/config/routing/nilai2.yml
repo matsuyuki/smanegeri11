@@ -1,0 +1,30 @@
+nilai2:
+    pattern:  /
+    defaults: { _controller: "SMASMABundle:Nilai2:index" }
+
+nilai2_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SMASMABundle:Nilai2:show" }
+
+nilai2_new:
+    pattern:  /new
+    defaults: { _controller: "SMASMABundle:Nilai2:new" }
+
+nilai2_create:
+    pattern:  /create
+    defaults: { _controller: "SMASMABundle:Nilai2:create" }
+    requirements: { _method: post }
+
+nilai2_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SMASMABundle:Nilai2:edit" }
+
+nilai2_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SMASMABundle:Nilai2:update" }
+    requirements: { _method: post|put }
+
+nilai2_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SMASMABundle:Nilai2:delete" }
+    requirements: { _method: post|delete }

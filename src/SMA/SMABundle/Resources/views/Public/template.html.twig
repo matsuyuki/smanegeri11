@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html"; charset=utf-8" />
+        <title>{% block title %}Halaman Member{% endblock %}</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/smasma/css/admin.css') }}" type="text/css" rel="stylesheet" />
+            <link href="{{ asset('bundles/smasma/css/menu.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
+
+        <script src="{{ asset('bundles/smasma/js/jquery-1.9.1.js') }}"></script>
+
+    </head>
+    <body>
+        <div class="main">
+            <div class="header">
+                <img src="{{asset('image/header3.jpg')}}" class="img-responsive img-thumbnail" alt="Responsive image">
+            </div>
+
+            <div class="menu">
+                <div id='cssmenu'>
+                    <ul>
+                        <li><a href="{{ path('SMASMABundle_homepage') }}">Home</a></li>
+
+                        <li class='has-sub '><a href="{{ path('SMASMABundle_profil') }}">Profil</a></li>
+                        <li class='has-sub '><a href="{{ path('check_kelas') }}">Kelas</a>
+                            <ul>
+                                <li><a href="{{ path('check_pegawai_satu') }}">Kelas 1-1</a></li>
+                                <li><a href="{{ path('check_pegawai_satu1') }}">Kelas 1-2</a></li>
+                                <li><a href="{{ path('check_pegawai_dua1') }}">Kelas 2 IPA-1</a></li>
+                                <li><a href="{{ path('check_pegawai_dua2') }}">Kelas 2 IPA-2</a></li>
+                                <li><a href="{{ path('check_pegawai_dua3') }}">Kelas 2 IPS-1</a></li>
+                                <li><a href="{{ path('check_pegawai_dua4') }}">Kelas 2 IPS-2</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga1') }}">Kelas 3 IPA-1</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga2') }}">Kelas 3 IPA-2</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga3') }}">Kelas 3 IPS-1</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga4') }}">Kelas 3 IPS-2</a></li>
+                            </ul>
+                        </li> 
+                        <li class='has-sub '><a href="{{ path('check_pegawai') }}">Pegawai</a>
+                            <ul>
+                                <li><a href="{{ path('check_kuis_kelas_satu') }}">Wali Kelas</a></li>
+                                <li><a href="{{ path('check_kuis_kelas_dua') }}">Guru</a></li>
+                                <li><a href="{{ path('check_kuis_kelas_tiga') }}">Guru Honorer</a></li>
+                            </ul>
+                        </li>
+                       <li><a href="{{ path('check_nilai') }}">Nilai</a></li>
+                        <li class='has-sub '><a href="">Absensi</a>
+                            <ul>
+                                <li><a href="{{ path('check_pegawai_satu') }}">Kelas 1-1</a></li>
+                                <li><a href="{{ path('check_absensi1') }}">Kelas 1-2</a></li>
+                                <li><a href="{{ path('check_pegawai_dua1') }}">Kelas 2 IPA-1</a></li>
+                                <li><a href="{{ path('check_pegawai_dua2') }}">Kelas 2 IPA-2</a></li>
+                                <li><a href="{{ path('check_pegawai_dua3') }}">Kelas 2 IPS-1</a></li>
+                                <li><a href="{{ path('check_pegawai_dua4') }}">Kelas 2 IPS-2</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga1') }}">Kelas 3 IPA-1</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga2') }}">Kelas 3 IPA-2</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga3') }}">Kelas 3 IPS-1</a></li>
+                                <li><a href="{{ path('check_pegawai_tiga4') }}">Kelas 3 IPS-2</a></li>
+                            </ul>
+                        </li> 
+                        <li><a href="{{ path('download') }}">Download</a></li>
+                        <li><a href="{{ path('SMASMABundle_about') }}">About Us</a></li>
+
+                    </ul>
+                </div>    
+                <div style="float:right; margin-top:4px; margin-right: 10px;">
+                    <a href="{{ path('welcome') }}">Logout</a>
+                </div>
+            </div>
+            <div class="konten">
+            {% block body %}{% endblock %}
+
+        </div>
+        <div class="footer">SMA NEGERI 11 MEDAN</div>
+    </div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{%block body%}
+            <script type="text/javascript" src="{{asset('bundles/smasma/js/tinymce/tiny_mce.js')}}"></script>
+        <script type="text/javascript">
+            tinyMCE.init({
+            // General options
+            mode : "textareas",
+            theme : "advanced",
+            width : "600",
+            height : "500",
+            });
+        </script>
+    <h2>Input Berita</h2>
+    <form class="well" id="form" method="POST" action="#">
+    <table>
+        <tr>
+            <td>Judul</td>
+            <td><input type="text" name="judul" size="100" value="{{berita.judul}}"></td>
+        </tr>
+        <tr>
+            <td>Isi</td>
+            <td><textarea name="isi">{{berita.isi}}</textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Post</button></td>
+        </tr>
+    </table>
+        
+    </form>
+{%endblock%}

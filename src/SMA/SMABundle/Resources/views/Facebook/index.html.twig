@@ -1,0 +1,18 @@
+{% extends 'SMASMABundle:Facebook:templatedetail.html.twig' %}
+
+{% block body %}
+    <h1 style="margin:0; padding: 0; color:#003B99">News Update</h1>
+    <br>
+    <div class="berita">
+        {% for item in berita %}
+            <a href="{{path('showberita', {'id':  item.Id  })}}" target="_blank"><center><div class="title-news">{{ item.judul }}</div></center>  </a>      
+            <div class="form">        
+                <p> {{ item.isi |raw}}</p>
+            </div>
+
+     
+        {% endfor %} 
+    </div>
+
+
+{% endblock %} 

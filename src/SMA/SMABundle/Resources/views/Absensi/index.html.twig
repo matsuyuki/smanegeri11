@@ -1,0 +1,43 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Absensi Siswa</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                
+                <th align="center">Nama</th>
+                <th align="center">Tanggal</th>
+                <th align="center">Kelas</th>
+                <th align="center">Sub Kelas</th>
+                <th align="center">Kehadiran</th>
+                <th align="center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entity in entities%}
+                <tr>
+                    <td align="center"><a href="{{ path('absensi_show', { 'id': entity.id }) }}">{{ entity.Nama }}</a></td>
+                    <td align="center">{% if entity.tanggal %}{{ entity.tanggal|date('Y-m-d') }}{% endif %}</td>
+                    <td align="center">{{ entity.kelas }}</td>
+                    <td align="center">{{ entity.subkelas }}</td>
+                    <td align="center">{{ entity.absen }}</td>
+                    <td align="center">
+                <ul>
+                    <li>
+                        <a href="{{ path('absensi_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('absensi_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        <a href="{{ path('absensi_new') }}"><button class="button">Tambah Data</button></a>
+      
+
+            {% endblock %}

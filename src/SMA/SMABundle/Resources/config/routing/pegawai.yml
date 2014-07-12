@@ -1,0 +1,36 @@
+page_simpanguru:
+    pattern:  /tambah_guru
+    defaults: { _controller: SMASMABundle:Pegawai:simpanguru }
+pegawai:
+    pattern:  /
+    defaults: { _controller: "SMASMABundle:Pegawai:index" }
+
+pegawai_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "SMASMABundle:Pegawai:show" }
+
+pegawai_new:
+    pattern:  /new
+    defaults: { _controller: "SMASMABundle:Pegawai:new" }
+pegawai_form:
+    pattern:  /new
+    defaults: { _controller: "SMASMABundle:Pegawai:formpegawai" }
+
+pegawai_create:
+    pattern:  /create
+    defaults: { _controller: "SMASMABundle:Pegawai:create" }
+    requirements: { _method: post }
+
+pegawai_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "SMASMABundle:Pegawai:edit" }
+
+pegawai_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "SMASMABundle:Pegawai:update" }
+    requirements: { _method: post|put }
+
+pegawai_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "SMASMABundle:Pegawai:delete" }
+    requirements: { _method: post|delete }

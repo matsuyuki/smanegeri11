@@ -1,0 +1,61 @@
+{% extends 'SMASMABundle:Admin:template.html.twig' %}
+
+{% block body -%}
+    <h1>Pegawai</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th align="center">Nis</th>
+                <td align="center">{{ entity.nis }}</td>
+            </tr>
+            <tr>
+                <th align="center">Nama</th>
+                <td align="center">{{ entity.nama }}</td>
+            </tr>
+            <tr>
+                <th align="center">Jabatan</th>
+                <td align="center">{{ entity.jabatan }}</td>
+            </tr>
+            <tr>
+                <th align="center">Telp</th>
+                <td align="center">{{ entity.telp }}</td>
+            </tr>
+            <tr>
+                <th align="center">Email</th>
+                <td align="center">{{ entity.email }}</td>
+            </tr>
+            <tr>
+                <th align="center">Alamat</th>
+                <td align="center">{{ entity.alamat }}</td>
+            </tr>
+            <tr>
+                <th align="center">Tgllahir</th>
+                <td align="center">{{ entity.tglLahir|date('Y-m-d H:i:s') }}</td>
+            </tr>
+            <tr>
+                <th align="center">Agama</th>
+                <td align="center">{{ entity.agama }}</td>
+            </tr>
+            <tr>
+                <th align="center">Jk</th>
+                <td align="center">{{ entity.jk }}</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('pegawai') }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('pegawai_edit', { 'id': entity.id }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

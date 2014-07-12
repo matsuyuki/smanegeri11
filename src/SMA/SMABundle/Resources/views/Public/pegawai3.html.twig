@@ -1,0 +1,30 @@
+{% extends 'SMASMABundle:Public:template.html.twig' %}
+
+{%block body%}
+    <legend><center>Pegawai </center></legend>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nip</th>
+                <th>Nama</th>
+                <th>alamat</th>
+                <th>jabatan</th>
+                <th>Bidang</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for view in entity1 %}
+                <tr>
+                    <td>{{view.nis}}</td>
+                    <td>{{view.nama}}</td>
+                    <td>{{view.alamat}}</td>
+                    <td>{{view.jabatan}}</td>
+                    <td>{{view.bidang}}</td>
+                    <td>{{view.email}}</td>
+                </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock%}{# empty Twig template #}
+{# empty Twig template #}

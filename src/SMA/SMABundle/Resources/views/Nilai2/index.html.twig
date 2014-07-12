@@ -1,0 +1,32 @@
+{% extends 'SMASMABundle:Public:templatedetail.html.twig' %}
+
+{% block body -%}
+    <h1>Daftar Nilai</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nim</th>
+                <th>Matapelajaran</th>
+                <th>Nilaiangka</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+
+            <tr>
+                <td align="center"><a href="{{ path('nilai2_show', { 'id': entity.id }) }}">{{ entity.nim }}</a></td>
+                <td align="center">{{ entity.matapelajaran }}</td>
+                <td align="center">{{ entity.nilaiangka }}</td>
+
+
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+
+    </ul>
+    {% endblock %}
